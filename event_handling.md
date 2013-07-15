@@ -1,14 +1,27 @@
 # JS Event Handling
 
-### Events
+## Events
   * core of any JS application
-  * how JS adds *interactivity*    
-      `User does something, page is loaded => page REACTS`  
-      `EVENT => executed script`
+  * how JS adds *interactivity* 
 
-### Event Types
 
-### Registering Event Handlers to HTML Elements
-### Event Ordering
-### Cancelling Events
-### jQuery Event Handling
+## Event Types
+  * click (1 mousedown + 1 mouseup)
+  * dblclick
+  * mousemove
+  * mouseover & mouseout (mousenter & mouseleave)
+  * focus
+  * blur
+  * change (for form inputs)
+  * submit (for forms)
+
+
+## Registering Event Handlers to HTML Elements
+  1. inline
+  2. traditional
+  3. W3C
+ 
+
+## Event Ordering
+## Cancelling Events
+## jQuery Event Handling
