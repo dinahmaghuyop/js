@@ -105,5 +105,20 @@ This is where the `useCapture` argument of `addEventListener()` comes into pictu
 * `false` :  event handler is set for the bubbling phase
 
 
-## Cancelling Events
+## Canceling Events
+
+### event.preventDefault
+Default action of the event will not be triggered
+
+
+### event.stopPropagation
+Prevents the event from bubbling up the DOM tree, 
+preventing any parent handlers from being notified of the event
+
+
+### event.stopImmediatePropagation
+* Preventing any further handlers from being called at all—even if they’re on the same element
+* Prevents the event from bubbling up the DOM tree
+
+
 ## jQuery Event Handling
