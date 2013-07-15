@@ -129,6 +129,12 @@ This is where the `useCapture` argument of `addEventListener()` comes into pictu
 * `true`  :  event handler is set for the capturing phase
 * `false` :  event handler is set for the bubbling phase
 
+```javascript
+// Use capturing by passing true as the last argument
+button.addEventListener("click", function(){ /* ... */ }, true);
+```
+
+
 
 ## Canceling Events
 
