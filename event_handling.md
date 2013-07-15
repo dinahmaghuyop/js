@@ -42,7 +42,7 @@ element.onclick = null;
 element.attachEvent('onclick',doSomething)
 element.detachEvent('onclick',doSomething)
 ```
-* ***Drawbacks:*** Events always bubble, no way for capturing ???
+* ***Drawback:*** Events always bubble, no way for capturing ???
 
 ### W3C
 
