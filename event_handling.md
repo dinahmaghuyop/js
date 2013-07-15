@@ -122,3 +122,10 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
+
+
+## Sources:
+* Javascript Web Applications - Alex MacCaw
+* https://developer.mozilla.org/en-US/docs/Web/API/Event
+* http://www.quirksmode.org/js
+* http://api.jquery.com/category/events/
