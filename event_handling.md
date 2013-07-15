@@ -82,11 +82,11 @@ div.removeEventListener("click", listener, false);
 
 
 
-## The Event Model
+## Event Model
 * `target` - Element to which the event was originally dispatched
 * `currentTarget` - Element whose EventListeners are currently being processed. This is particularly useful during capturing and bubbling. 
 * `type` - Name of the event
-
+* `pageX`, `pageY` - Event coordinates relative to the page
 
 
 ## Event Ordering
@@ -130,6 +130,7 @@ preventing any parent handlers from being notified of the event
 
 ## Sources:
 * Javascript Web Applications - Alex MacCaw
+* http://www.w3.org/TR/DOM-Level-2-Events/events.html
 * https://developer.mozilla.org/en-US/docs/Web/API/Event
 * http://www.quirksmode.org/js
 * http://api.jquery.com/category/events/
