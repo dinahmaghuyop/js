@@ -101,6 +101,16 @@ div.removeEventListener("click", listener, false);
 If an element and one of its ancestors have an event handler for the same event type, 
 which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/8/
 
+
+```html
+<div id="super-parent">
+    <div id="parent">
+        <div id="child">Hello</div>
+    </div>
+</div>
+```
+
+
 ###Capturing
 Triggers event listeners from the top-most ancestor to the element in question
 (i.e. from the outside in)
