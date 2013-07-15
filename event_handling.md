@@ -99,7 +99,7 @@ div.removeEventListener("click", listener, false);
 
 ## Event Ordering
 If an element and one of its ancestors have an event handler for the same event type, 
-which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/8/
+which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/9/
 
 
 ```html
