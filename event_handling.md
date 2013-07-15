@@ -71,16 +71,20 @@ div.removeEventListener("click", listener, false);
 ```
 
 ## jQuery Event Handling
-* `bind()` - `unbind()`
+
+###`bind()` - `unbind()`
   - assigns handler to EACH matched element 
-  - costly!
-* `live()` - `die()`
+  - costly
+ 
+###`live()` - `die()`
   - assigns handler to document, propagates to matched element
-  - depracated
-* `delegate()` - `undelegate()`
+  - depracated  
+
+###`delegate()` - `undelegate()`
   - assigns handler to specific element, propagates to matched element
-  - great for dynamically added elements
-* `on()` - `off()` 
+  - great for dynamically added elements 
+
+###`on()` - `off()` 
   - mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
 
 
