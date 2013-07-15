@@ -90,6 +90,55 @@ div.removeEventListener("click", listener, false);
 
 
 
+## The Event Model
+* `target` - Element to which the event was originally dispatched
+* `currentTarget` - Element whose EventListeners are currently being processed. This is particularly useful during capturing and bubbling. 
+* `type` - Name of the event
+
+
+
 ## Event Ordering
-## Cancelling Events
-## jQuery Event Handling
+If an element and one of its ancestors have an event handler for the same event type, 
+which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/8/
+
+###Capturing
+Triggers event listeners from the top-most ancestor to the element in question
+(i.e. from the outside in)
+
+
+###Bubbling
+Triggers event listeners from the element, propagating up through its ancestors
+(i.e. from the inside out)
+
+
+###W3C Model
+Events are first captured until they reach the target element; then, they bubble up again.
+
+
+This is where the `useCapture` argument of `addEventListener()` comes into picture
+* `true`  :  event handler is set for the capturing phase
+* `false` :  event handler is set for the bubbling phase
+
+
+## Canceling Events
+
+### event.preventDefault
+Default action of the event will not be triggered
+
+
+### event.stopPropagation
+Prevents the event from bubbling up the DOM tree, 
+preventing any parent handlers from being notified of the event
+
+
+### event.stopImmediatePropagation
+* Preventing any further handlers from being called at all—even if they’re on the same element
+* Prevents the event from bubbling up the DOM tree
+
+
+## Sources:
+* Javascript Web Applications - Alex MacCaw
+* https://developer.mozilla.org/en-US/docs/Web/API/Event
+* http://www.quirksmode.org/js
+* http://api.jquery.com/category/events/
+
