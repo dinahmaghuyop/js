@@ -39,6 +39,12 @@ element.onclick = null;
 ```
 * ***Major drawback:*** 1 handler per element per event only!
 
+```js
+element.onclick = doSomething;
+element.onclick = doSomethingElse; // <- overrides previous registration
+```
+
+
 ### Microsoft
 
 
