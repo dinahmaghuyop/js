@@ -82,6 +82,13 @@ div.removeEventListener("click", listener, false);
 
 
 
+## The Event Model
+* `target` - Element to which the event was originally dispatched
+* `currentTarget` - Element whose EventListeners are currently being processed. This is particularly useful during capturing and bubbling. 
+* `type` - Name of the event
+
+
+
 ## Event Ordering
 If an element and one of its ancestors have an event handler for the same event type, 
 which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/8/
@@ -119,9 +126,6 @@ preventing any parent handlers from being notified of the event
 ### event.stopImmediatePropagation
 * Preventing any further handlers from being called at all—even if they’re on the same element
 * Prevents the event from bubbling up the DOM tree
-
-
-## jQuery Event Handling
 
 
 ## Sources:
