@@ -83,5 +83,27 @@ div.removeEventListener("click", listener, false);
 
 
 ## Event Ordering
+If an element and one of its ancestors have an event handler for the same event type, 
+which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/8/
+
+###Capturing
+Triggers event listeners from the top-most ancestor to the element in question
+(i.e. from the outside in)
+
+
+###Bubbling
+Triggers event listeners from the element, propagating up through its ancestors
+(i.e. from the inside out)
+
+
+###W3C Model
+Events are first captured until they reach the target element; then, they bubble up again.
+
+
+This is where the `useCapture` argument of `addEventListener()` comes into picture
+* `true`  :  event handler is set for the capturing phase
+* `false` :  event handler is set for the bubbling phase
+
+
 ## Cancelling Events
 ## jQuery Event Handling
