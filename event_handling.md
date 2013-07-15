@@ -31,18 +31,10 @@
 
 ### traditional
 ```js
-//assigning a handler function
 element.onclick = doSomething;
-
-//removing a handler function
 element.onclick = null;
 ```
 * ***Drawback:*** 1 handler per element per event only!
-
-```js
-element.onclick = doSomething;
-element.onclick = doSomethingElse; // <- overrides previous registration
-```
 
 
 ### Microsoft
@@ -86,7 +78,10 @@ div.removeEventListener("click", listener, false);
   - assigns handler to document, propagates to matched element
   - depracated
 * `delegate()` - `undelegate()`
+  - assigns handler to specific element, propagates to matched element
+  - great for dynamically added elements
 * `on()` - `off()` 
+  - mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
 
 
 
