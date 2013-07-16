@@ -135,6 +135,7 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
+http://jsfiddle.net/ewym3/
 
 ###`bind()` - `unbind()`
   - assigns handler to EACH matched element 
