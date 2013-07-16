@@ -135,7 +135,6 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
-* http://jsfiddle.net/ewym3/  
 * http://www.elijahmanor.com/2012/02/differences-between-jquery-bind-vs-live.html
 * http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/
 
@@ -188,4 +187,6 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
 * https://developer.mozilla.org/en-US/docs/Web/API/Event
 * http://www.quirksmode.org/js
 * http://api.jquery.com/category/events/
+* http://www.elijahmanor.com/2012/02/differences-between-jquery-bind-vs-live.html
+* http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/
 
