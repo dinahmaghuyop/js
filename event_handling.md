@@ -135,8 +135,9 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
-http://jsfiddle.net/ewym3/
-http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/
+* http://jsfiddle.net/ewym3/  
+* http://www.elijahmanor.com/2012/02/differences-between-jquery-bind-vs-live.html
+* http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/
 
 ###`bind()` - `unbind()`
   - assigns handler to EACH matched element 
