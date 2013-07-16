@@ -175,20 +175,37 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
    - execute all handlers and behaviors attached to the matched elements for the given event type
    - custom events
 
-```js
-var $parent = $('#parent'),
-    $child = $('#child');
+ ```js
+ var $parent = $('#parent'),
+     $child = $('#child');
+ 
+ $parent.on('custom', function(e){ 
+     alert('Parent Custom Event');
+ });
+ 
+ 
+ $parent.on('click', function(e){
+     $parent.trigger('custom');
+ });
+ ```
+ 
+ * `triggerHandler()`
+   - trigger handlers bound via jQuery without also triggering the native event
+ 
+ ```js
+ var $parent = $('#parent'),
+     $link = $('#link');
 
-$parent.on('custom', function(e){ 
-    alert('Parent Custom Event');
-});
-
-$parent.on('click', function(e){
-    alert('Parent');
-    $parent.trigger('custom');
-});
-```
-
+ $link.on('click', function(e){
+     e.preventDefault();
+     alert('Link');
+ });
+ 
+ 
+ $parent.on('click', function(e){
+     $link.triggerHandler('click');
+ });
+ ```
 
 
 ## Sources:
