@@ -80,7 +80,7 @@ div.removeEventListener("click", listener, false);
 
 ## Event Ordering
 If an element and one of its ancestors have an event handler for the same event type, 
-which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/9/
+which one should fire first when the event is triggered? http://jsfiddle.net/uYQkc/12/
 
 
 ```html
@@ -176,7 +176,17 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
    - custom events
 
 ```js
+var $parent = $('#parent'),
+    $child = $('#child');
 
+$parent.on('custom', function(e){ 
+    alert('Parent Custom Event');
+});
+
+$parent.on('click', function(e){
+    alert('Parent');
+    $parent.trigger('custom');
+});
 ```
 
 
