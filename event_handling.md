@@ -174,6 +174,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
  * `trigger()`
    - execute all handlers and behaviors attached to the matched elements for the given event type
    - custom events
+   - http://jsfiddle.net/cKSQc/1/
 
  ```js
  var $parent = $('#parent'),
