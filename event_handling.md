@@ -147,20 +147,20 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
    - dynamically added elements won't get the handler
  
  ```js
- $( "#members li a" ).on( "click", function( e ) {} ); 
+ $("#members li a").on("click", function(e){}); 
  
- $( "#members li a" ).bind( "click", function( e ) {} ); 
- $( "#members li a" ).click( function( e ) {} ); 
+ $("#members li a").bind("click", function(e){}); 
+ $("#members li a").click(function(e){}); 
  ```
   
  * `live()` - `die()`
    - assigns handler to document, propagates to matched element
-   - depracated  
+   - deprecated  
  
  ```js
- $( document ).on( "click", "#members li a", function( e ) {} ); 
+ $(document).on("click", "#members li a", function(e){}); 
 
- $( "#members li a" ).live( "click", function( e ) {} );
+ $("#members li a").live("click", function(e){});
  ```
  
  * `delegate()` - `undelegate()`
@@ -168,11 +168,18 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
    - great for dynamically added elements 
 
  ```js
- $( "#members" ).on( "click", "li a", function( e ) {} ); 
+ $("#members").on("click", "li a", function(e){}); 
  
- $( "#members" ).delegate( "li a", "click", function( e ) {} );
+ $("#members").delegate("li a", "click", function(e){});
  ```
+ 
+ * `trigger()`
+   - execute all handlers and behaviors attached to the matched elements for the given event type
+   - custom events
 
+```js
+
+```
 
 
 
