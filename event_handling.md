@@ -2,7 +2,7 @@
 
 ## Events
   * core of any JS application
-  * how JS adds ***interactivity***
+  * adds ***interactivity***
 
 
 ## Common Event Types
