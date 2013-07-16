@@ -139,20 +139,39 @@ preventing any parent handlers from being notified of the event
 * http://www.elijahmanor.com/2012/02/differences-between-jquery-bind-vs-live.html
 * http://www.alfajango.com/blog/the-difference-between-jquerys-bind-live-and-delegate/
 
-###`bind()` - `unbind()`
-  - assigns handler to EACH matched element 
-  - costly
+###`on()` - `off()`
+mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
+
+ * `bind()` - `unbind()`
+   - assigns handler to EACH matched element -> costly!   
+   - dynamically addeded elements won't get the handler
  
-###`live()` - `die()`
-  - assigns handler to document, propagates to matched element
-  - depracated  
+ ```js
+ $( "#members li a" ).on( "click", function( e ) {} ); 
+ 
+ $( "#members li a" ).bind( "click", function( e ) {} ); 
+ $( "#members li a" ).click( function( e ) {} ); 
+ ```
+  
+ * `live()` - `die()`
+   - assigns handler to document, propagates to matched element
+   - depracated  
+ 
+ ```js
+ $( document ).on( "click", "#members li a", function( e ) {} ); 
 
-###`delegate()` - `undelegate()`
-  - assigns handler to specific element, propagates to matched element
-  - great for dynamically added elements 
+ $( "#members li a" ).live( "click", function( e ) {} );
+ ```
+ 
+ * `delegate()` - `undelegate()`
+   - assigns handler to specific element, propagates to matched element
+   - great for dynamically added elements 
 
-###`on()` - `off()` 
-  - mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
+ ```js
+ $( "#members" ).on( "click", "li a", function( e ) {} ); 
+ 
+ $( "#members" ).delegate( "li a", "click", function( e ) {} );
+ ```
 
 
 
