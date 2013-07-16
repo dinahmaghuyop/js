@@ -70,24 +70,6 @@ div.addEventListener("click", listener, false);
 div.removeEventListener("click", listener, false);
 ```
 
-## jQuery Event Handling
-
-###`bind()` - `unbind()`
-  - assigns handler to EACH matched element 
-  - costly
- 
-###`live()` - `die()`
-  - assigns handler to document, propagates to matched element
-  - depracated  
-
-###`delegate()` - `undelegate()`
-  - assigns handler to specific element, propagates to matched element
-  - great for dynamically added elements 
-
-###`on()` - `off()` 
-  - mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
-
-
 
 ## The Event Model
 * `target` - Element to which the event was originally dispatched
@@ -149,6 +131,27 @@ preventing any parent handlers from being notified of the event
 ### event.stopImmediatePropagation
 * Preventing any further handlers from being called at all—even if they’re on the same element
 * Prevents the event from bubbling up the DOM tree
+
+
+
+## jQuery Event Handling
+
+###`bind()` - `unbind()`
+  - assigns handler to EACH matched element 
+  - costly
+ 
+###`live()` - `die()`
+  - assigns handler to document, propagates to matched element
+  - depracated  
+
+###`delegate()` - `undelegate()`
+  - assigns handler to specific element, propagates to matched element
+  - great for dynamically added elements 
+
+###`on()` - `off()` 
+  - mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
+
+
 
 
 ## Sources:
