@@ -139,7 +139,7 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
-http://jsfiddle.net/q7bT4/1/      
+http://jsfiddle.net/q7bT4/2/      
 DOM Tree: https://docs.google.com/a/clinic-it.com/drawings/d/1-ChklbNhDLgH8GfRJxsfSdgmKw5z2b1vNfQQqAtzKRg/edit
 ###`on()` - `off()`
 mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
@@ -175,7 +175,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
  $("#members").delegate("li a", "click", function(e){});
  ```
  
- * `trigger()`
+###`trigger()`
    - execute all handlers and behaviors attached to the matched elements for the given event type
    - custom events
    - http://jsfiddle.net/cKSQc/1/
@@ -194,7 +194,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
  });
  ```
  
- * `triggerHandler()`
+###`triggerHandler()`
    - trigger handlers bound via jQuery without also triggering the native event
  
  ```js
