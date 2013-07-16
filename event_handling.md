@@ -7,8 +7,6 @@
 
 ## Common Event Types
   * `click`
-  * `mousedown`
-  * `mouseup`
   * `dblclick`
   * `mousemove`
   * `mouseover` / `mousenter`
