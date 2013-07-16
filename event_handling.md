@@ -103,7 +103,6 @@ Triggers event listeners from the element, propagating up through its ancestors
 ###W3C Model
 Events are first captured until they reach the target element; then, they bubble up again.
 
-
 This is where the `useCapture` argument of `addEventListener()` comes into picture
 * `true`  :  event handler is set for the capturing phase
 * `false` :  event handler is set for the bubbling phase
@@ -111,6 +110,13 @@ This is where the `useCapture` argument of `addEventListener()` comes into pictu
 ```javascript
 // Use capturing by passing true as the last argument
 button.addEventListener("click", function(){ /* ... */ }, true);
+```
+
+Example:
+
+```js
+element1.addEventListener('click', doSomething1, true);
+element2.addEventListener('click', doSomething2, false);
 ```
 
 
