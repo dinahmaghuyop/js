@@ -144,7 +144,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
 
  * `bind()` - `unbind()`
    - assigns handler to EACH matched element -> costly!   
-   - dynamically addeded elements won't get the handler
+   - dynamically added elements won't get the handler
  
  ```js
  $( "#members li a" ).on( "click", function( e ) {} ); 
