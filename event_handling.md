@@ -109,14 +109,14 @@ This is where the `useCapture` argument of `addEventListener()` comes into pictu
 
 ```javascript
 // Use capturing by passing true as the last argument
-button.addEventListener("click", function(){ /* ... */ }, true);
+$button.addEventListener("click", function(){ /* ... */ }, true);
 ```
 
 Example:
 
 ```js
-element1.addEventListener('click', doSomething1, true);
-element2.addEventListener('click', doSomething2, false);
+$parentDiv.addEventListener('click', doSomething1, true);
+$childDiv.addEventListener('click', doSomething2, false);
 ```
 
 
