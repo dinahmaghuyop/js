@@ -139,7 +139,7 @@ preventing any parent handlers from being notified of the event
 
 
 ## jQuery Event Handling
-http://jsfiddle.net/ewym3/  
+http://jsfiddle.net/uYQkc/9/   
 DOM Tree: https://docs.google.com/a/clinic-it.com/drawings/d/1-ChklbNhDLgH8GfRJxsfSdgmKw5z2b1vNfQQqAtzKRg/edit
 ###`on()` - `off()`
 mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending on how you call it
