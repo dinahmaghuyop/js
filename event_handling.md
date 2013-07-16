@@ -128,13 +128,13 @@ Default action of the event will not be triggered
 
 
 ### event.stopPropagation
-Prevents the event from bubbling up the DOM tree, 
+Prevents further propagation, 
 preventing any parent handlers from being notified of the event
 
 
 ### event.stopImmediatePropagation
 * Preventing any further handlers from being called at all—even if they’re on the same element
-* Prevents the event from bubbling up the DOM tree
+* Prevents further propagation
 
 
 
@@ -178,6 +178,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
 ###`trigger()`
    - execute all handlers and behaviors attached to the matched elements for the given event type
    - custom events
+   - event continues to propagate through its ancestors
    - http://jsfiddle.net/cKSQc/1/
 
  ```js
@@ -196,6 +197,7 @@ mostly syntax sugar that can mimic `bind()`, `live()`, or `delegate()` depending
  
 ###`triggerHandler()`
    - trigger handlers bound via jQuery without also triggering the native event
+   - does not propagate
  
  ```js
  var $parent = $('#parent'),
